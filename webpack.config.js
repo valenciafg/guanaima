@@ -26,6 +26,12 @@ jsLoader = {
   loaders: [ 'babel?presets[]='+path.resolve('./node_modules/babel-preset-es2015')+'&cacheDirectory' ]
 };
 
+tsLoader = {
+  test: /\.tsx?$/,
+  exclude: /(node_modules|bower_components)/,
+  loader: 'ts-loader'
+};
+
 if (argv.watch) { // '--watch' to add monkey-hot
   jsLoader.loaders.unshift('monkey-hot');
 }
@@ -100,6 +106,7 @@ webpackConfig = {
     ],
     loaders: [
       jsLoader,
+      tsLoader,
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style', [
@@ -155,7 +162,7 @@ webpackConfig = {
     ]
   },
   resolve: {
-    extensions: [ '', '.js', '.json' ],
+    extensions: [ '', '.js', '.json', '.ts', '.tsx' ],
     modulesDirectories: [
       'node_modules',
       'bower_components'
