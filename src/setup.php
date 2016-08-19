@@ -7,6 +7,8 @@ use Roots\Sage\Template;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_script('sage/polyfills.js', asset_path('scripts/polyfills.js'), [], null, true);
+    wp_enqueue_script('sage/app.js', asset_path('scripts/app.js'), [], null, true);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
