@@ -5,6 +5,12 @@
       "./scripts/main.js",
       "./styles/main.scss"
     ],
+    "polyfills": [
+      "./scripts/app/polyfills.ts"
+    ],
+    "app":[
+      "./scripts/app/main.ts"
+    ],
     "customizer": [
       "./scripts/customizer.js"
     ]
