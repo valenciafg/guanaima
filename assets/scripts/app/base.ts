@@ -1,21 +1,24 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {HolaComponent} from './hola.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-// import {TopNavComponent} from './layouts/topnav/topnav';
+ import {TopNavComponent} from './layouts/topnav/topnav';
 
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [NgbModule],
-  bootstrap: [AppComponent]
-})
+// @NgModule({
+//   declarations: [AppComponent],
+//   imports: [NgbModule],
+//   bootstrap: [AppComponent]
+// })
 
 @Component({
-  selector: 'my-app',
+  moduleId: module.id,
+  selector: 'guanaima-app',
   template: `
-      <top-nav></top-nav>
-      <h1>Angular 2 WP Theme</h1>
-    `//,
-  // directives: [TopNavComponent]
+      <top-nav>*****</top-nav>
+      <hola-angular>Saludo</hola-angular>
+    `,
+    encapsulation: ViewEncapsulation.None,
+   directives: [TopNavComponent,HolaComponent]
 })
 
 export class AppComponent { }
