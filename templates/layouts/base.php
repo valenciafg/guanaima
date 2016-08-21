@@ -8,9 +8,15 @@
       </div>
     <![endif]-->
     <?php
-      do_action('get_header');
-      get_template_part('partials/header');
+      // do_action('get_header');
+      get_template_part('partials/header/header');
     ?>
+    <!-- <div class="container">
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+    </div> -->
     <div class="wrap container" role="document">
       <div class="content row">
         <main class="main">
