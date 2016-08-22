@@ -1,6 +1,7 @@
 // import external dependencies
 import 'jquery'
 import 'bootstrap/dist/js/bootstrap'
+import 'vegas/dist/vegas'
 
 // import local dependencies
 import Router from './util/router';

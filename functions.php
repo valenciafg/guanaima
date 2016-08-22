@@ -56,3 +56,24 @@ array_walk($sage_includes, function ($file) {
         trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
     }
 });
+/**
+ * Guanaima includes
+ *
+ *
+ */
+$guanaima_includes = [
+    'application/components/Landing.php'
+//    //'mvc/main.php'
+//    'mvc/models/posttypes/Place.php',
+//    'mvc/models/taxonomies/Country.php',
+//    'mvc/models/taxonomies/Location.php',
+//    //'mvc/models/taxonomies/MediaCategory.php',
+//    'mvc/models/taxonomies/PlaceType.php',
+//    'mvc/models/taxonomies/Theme.php'
+
+];
+array_walk($guanaima_includes, function ($file) {
+    if (!locate_template($file, true, true)) {
+        trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
+    }
+});
