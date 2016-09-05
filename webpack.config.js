@@ -31,7 +31,10 @@ tsLoader = {
   exclude: /(node_modules|bower_components)/,
   loader: 'ts-loader'
 };
-
+htmlLoader = {
+  test:/\.html$/,
+  loader:'html'
+}
 if (argv.watch) { // '--watch' to add monkey-hot
   jsLoader.loaders.unshift('monkey-hot');
 }
@@ -107,6 +110,7 @@ webpackConfig = {
     loaders: [
       jsLoader,
       tsLoader,
+      htmlLoader,
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style', [

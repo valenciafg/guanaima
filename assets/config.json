@@ -3,7 +3,8 @@
   "entry": {
     "main": [
       "./scripts/main.js",
-      "./styles/main.scss"
+      "./styles/main.scss",
+      "./images/mauritius.jpg"
     ],
     "polyfills": [
       "./scripts/app/polyfills.ts"

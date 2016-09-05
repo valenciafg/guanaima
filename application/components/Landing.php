@@ -11,14 +11,14 @@ class Landing
         $this->setOverlay();
     }
     private function setOverlay(){
-        $this->overlay = get_stylesheet_directory_uri() .  '/node_modules/vegas/dist/overlays/07.png';
+        $this->overlay = get_template_directory_uri() .  '/node_modules/vegas/dist/overlays/07.png';
     }
     private function setImages(){
         $landing_images = $this->setLandingImages();
         if(!empty($landing_images)){
             $images = $landing_images;
         }else{
-            $images[] = get_stylesheet_directory_uri() . '/assets/images/mauritius.jpg';
+            $images[] = get_template_directory_uri() . '/assets/images/mauritius.jpg';
         }
 
         $this->images = $images;

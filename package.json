@@ -87,6 +87,7 @@
     "es6-promise": "^3.2.1",
     "es6-shim": "^0.35.1",
     "font-awesome": "^4.6.3",
+    "html-loader": "^0.4.3",
     "jasmine-core": "^2.4.1",
     "jquery": "^1.12.4",
     "reflect-metadata": "^0.1.3",

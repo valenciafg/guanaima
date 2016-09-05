@@ -5,6 +5,7 @@
 @import "~font-awesome/scss/font-awesome";
 
 @import "common/global";
+@import "common/_fonts";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
@@ -16,3 +17,4 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/landing";

@@ -1,0 +1,28 @@
+<form>
+    {{diagnostic}}
+    <!--<input type="hidden" name="post_type" value="attachment">-->
+    <div class="form-horizontal">
+        <div class="input-group">
+            <!-- Input Search -->
+            <input type="text" class="form-control" id="title"
+                   required
+                   [ngModel]="myImagen.title" name="title"
+                   (ngModelChange)="myImagen.title = $event" >
+            <!-- Search Button -->
+            <span class="input-group-btn">
+                <button id="btn-search" class="btn btn-info" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </span>
+        </div>
+        TODO: remove this: {{myImagen.title}}
+    </div>
+</form>
+<p>Imagenes:</p>
+    <ul>
+      <li *ngFor="let img of imagenes">
+        {{ img.title }}
+      </li>
+    </ul>
+  <button (click)="onClickMe()">Click me!</button>
+    {{clickMessage}}

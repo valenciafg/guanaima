@@ -1,7 +1,4 @@
-import {AppComponent} from './base';
-//import {AppComponent} from './hola.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {HTTP_PROVIDERS} from '@angular/http';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-bootstrap(AppComponent, [HTTP_PROVIDERS]);
+platformBrowserDynamic().bootstrapModule(AppModule);
