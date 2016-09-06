@@ -29,8 +29,19 @@ import { Component } from '@angular/core';
 import { Image } from './image';
 @Component({
   selector: 'search-images',
-  template: require('./app.component.html')
-  //template: require('./prueba.html')
+  template: require('./app.component.html'),
+  styles: [`
+  .landing-overlay-content {
+    color:#fff;
+    position:absolute;
+    z-index:12;
+    top:50%;
+    left:0;
+    width:100%;
+    text-align:center;
+    padding: 25px;
+  }
+  `]
 })
 export class AppComponent {
   siteName: string;

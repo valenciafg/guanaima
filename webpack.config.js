@@ -9,7 +9,6 @@ var webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
     cssnano = require('cssnano');
-
 // Internal dependencies
 var config = require('./assets/config');
 
@@ -34,7 +33,7 @@ tsLoader = {
 htmlLoader = {
   test:/\.html$/,
   loader:'html'
-}
+};
 if (argv.watch) { // '--watch' to add monkey-hot
   jsLoader.loaders.unshift('monkey-hot');
 }
@@ -172,9 +171,9 @@ webpackConfig = {
       'bower_components'
     ]
   },
-  externals: {
-    jquery: 'jQuery'
-  },
+  // externals: {
+  //   jquery: 'jQuery'
+  // },
   plugins: [
     new Clean([config.output.path]),
     new ExtractTextPlugin(stylesFilename, {
@@ -182,9 +181,9 @@ webpackConfig = {
       disable: (argv.watch === true) // '--watch' disable ExtractTextPlugin
     }),
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
+      // $: 'jquery',
+      // jQuery: 'jquery',
+      // 'window.jQuery': 'jquery',
       'Tether': 'tether',
       'window.Tether': 'tether'
     })
