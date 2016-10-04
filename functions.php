@@ -61,15 +61,18 @@ array_walk($sage_includes, function ($file) {
  *
  *
  */
-$guanaima_includes = [
-    'application/components/Landing.php'
+ $guanaima_includes = [
+    'application/components/Landing.php',
+     'application/API/PlaceApi.php',
+     'application/API/MediaApi.php',
+     'application/API/initApi.php',
 //    //'mvc/main.php'
-//    'mvc/models/posttypes/Place.php',
-//    'mvc/models/taxonomies/Country.php',
-//    'mvc/models/taxonomies/Location.php',
-//    //'mvc/models/taxonomies/MediaCategory.php',
-//    'mvc/models/taxonomies/PlaceType.php',
-//    'mvc/models/taxonomies/Theme.php'
+    'application/models/post-types/Place.php',
+    'application/models/taxonomies/Country.php',
+    'application/models/taxonomies/Location.php',
+    'application/models/taxonomies/MediaCategory.php',
+    'application/models/taxonomies/PlaceType.php',
+    'application/models/taxonomies/Theme.php'
 
 ];
 array_walk($guanaima_includes, function ($file) {
