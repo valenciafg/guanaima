@@ -24,9 +24,9 @@
 //   template: '<hero-form></hero-form>'
 // })
 // export class AppComponent { }
-
 import { Component } from '@angular/core';
-import { Image } from './image';
+
+// import { Image } from './image';
 @Component({
   selector: 'search-images',
   template: require('./app.component.html'),
@@ -43,9 +43,6 @@ import { Image } from './image';
   }
   `]
 })
-export class AppComponent {
-  siteName: string;
-  constructor(){
-    this.siteName = 'Guanaima';
-  }
+export class AppComponent{
+  siteName: string = 'Guanaima';
 }
